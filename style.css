@@ -1,0 +1,106 @@
+@import url(https://fonts.googleapis.com/css?family=Rubik:300,regular,500,700);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+header{
+  background: linear-gradient(90deg, rgba(11,11,142,0.9864320728291317) 9%, rgba(9,71,121,1) 22%, rgba(8,142,111,1) 48%, rgba(0,245,255,1) 99%);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 140px;
+}
+
+#main{
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  padding-top: 30px;
+}
+
+.card{
+  width: 330px;
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  row-gap: 5px;
+  box-shadow: 0 0 10px rgba(0, 132, 255, 0.5);
+  padding: 16px;
+}
+
+.card::before{
+  position: absolute;
+  content: "";
+  width: 330px;
+  height: 50px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(104, 139, 255, 0.7);
+  border-radius: 9px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  top: 376px;
+}
+
+.card-city, .card-weather, .card-discription{
+  width: 100%;
+}
+
+.card-city > span{
+  background-color: rgb(216, 70, 70);
+  color: white;
+  border-radius: 5px;
+}
+
+.card-weather{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-value{
+  font-size: 60px;
+  font-family: 'Rubik', sans-serif;
+}
+
+#buttonForm{
+  background-color: rgb(130, 132, 255);
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  width: 78px;
+  height: 30px;
+  border-bottom: 10px;
+}
+
+#inputForm{
+  border: 0;
+  width: 190px;
+  height: 35px;
+  border-radius: 6px;
+  outline: none;
+}
+
+#textHeader{
+  color: whitesmoke;
+}
+
+#Form{
+  background-color: white;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.card-img{
+  width: 156px;
+  height: 156px;
+}

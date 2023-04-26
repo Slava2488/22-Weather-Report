@@ -52,8 +52,16 @@ form.addEventListener("submi", async (e) => {
     } else {
         clearCard();
         console.log(data);
+
         const weatherData = {
-            
-        }
+            name: data.location.name,
+            country: data.location.country,
+            temp: data,current.temp_c,
+            condition: data.current.condition.text,
+        };
+
+        showCard(weatherData);
     }
+
+    inputForm.value = "";
 })

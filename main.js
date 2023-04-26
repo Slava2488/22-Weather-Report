@@ -56,7 +56,7 @@ form.addEventListener("submi", async (e) => {
         const weatherData = {
             name: data.location.name,
             country: data.location.country,
-            temp: data,current.temp_c,
+            temp: data.current.temp_c,
             condition: data.current.condition.text,
         };
 

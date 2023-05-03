@@ -9,7 +9,7 @@ const clearCard = () => {
 }
 
 const showError = (errorMessage) => {
-    let dic = document.createElement('div')
+    let div = document.createElement('div')
     div.className = "card"
     div.innerHTML = errorMessage
 
@@ -17,7 +17,7 @@ const showError = (errorMessage) => {
 };
 
 const getWeather = async (city) => {
-    const url = `http://api.weatherapi.com/v1/current.json?key=${apiKey}$q=${city}`
+    const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`
     const response = await fetch(url);
     const data = await response.json();
     return data;
@@ -39,7 +39,7 @@ const showCard = ({ name, country, temp, condition}) => {
       mainContainer.innerHTML = html;
 };
 
-form.addEventListener("submi", async (e) => {
+form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     let city = inputForm.value;
@@ -64,4 +64,4 @@ form.addEventListener("submi", async (e) => {
     }
 
     inputForm.value = "";
-})
+});
